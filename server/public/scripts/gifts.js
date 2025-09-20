@@ -39,7 +39,7 @@ const renderGifts = async () => {
 
   const mainContent = document.getElementById("main-content");
 
-  if (data) {
+  if (data.ok() && data.length > 0) {
     data.map((gift) => {
       createCard(mainContent, gift);
     });

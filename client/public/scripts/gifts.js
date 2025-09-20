@@ -38,14 +38,14 @@ const renderGifts = async () => {
   const data = await response.json();
 
   const mainContent = document.getElementById("main-content");
-
-  if (data) {
+  console.log(data)
+  if (data && data.length > 0) {
     data.map((gift) => {
       createCard(mainContent, gift);
     });
   } else {
     const message = document.createElement("h2");
-    message.textContent = "No Gifts Available 😞";
+    message.textContent = "No Gifts Available :/";
     mainContent.appendChild(message);
   }
 };
