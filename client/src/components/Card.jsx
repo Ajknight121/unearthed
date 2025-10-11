@@ -18,6 +18,7 @@ const Card = (props) => {
                 <p>{'Price: ' + gift.pricepoint}</p>
                 <p>{'Great For: ' + gift.audience}</p>
                 <Link to={'/gift/' + gift.id}><a>Read More →</a></Link>
+                <Link to={'/edit/' + gift.id}>MORE</Link>
             </div>
         </div>
     )
